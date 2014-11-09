@@ -1,5 +1,6 @@
+del = require 'del'
 gulp = require 'gulp'
-express = require 'express'
+
 jade = require 'gulp-jade'
 gutil = require 'gulp-util'
 clean = require 'gulp-clean'
@@ -16,6 +17,8 @@ htmlMin = require 'gulp-htmlmin'
 htmlPrettify = require 'gulp-html-prettify'
 ngTemplateCache = require 'gulp-angular-templatecache'
 
+express = require 'express'
+
 gulp.task 'default', ['watch']
 
 gulp.task 'build', ['coffee', 'jade', 'libraries', 'imageIndex']
@@ -27,15 +30,15 @@ gulp.task 'watch', [ 'build' ],  ->
     ]
     gulp.watch patterns, [ 'build' ]
 
-gulp.task 'serve', ['build', 'watch'], ->
+gulp.task 'serve', ['default'], ->
     app = express()
     app.use(express.static('dist'))
     app.listen(8080)
     console.log 'listening on 8080'
 
 gulp.task 'clean', ->
-  gulp.src 'dist'
-      .pipe clean()
+    del [ 'dist' ]
+    return
 
 gulp.task 'coffee', ->
   gulp.src 'src/**/*.coffee'
