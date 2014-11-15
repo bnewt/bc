@@ -1,5 +1,5 @@
 angular.module 'app', [
-  'ngRoute'
-  'ngAnimate'
-  'mgcrea.ngStrap'
+    'ngRoute'
+    'ngAnimate'
+    'mgcrea.ngStrap'
 ]

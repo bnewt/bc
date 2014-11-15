@@ -1,4 +1,4 @@
 angular.module('app').controller 'ImagesCtrl', (images) ->
-    vm = @
+    vm = this
     vm.images = images
     return vm
