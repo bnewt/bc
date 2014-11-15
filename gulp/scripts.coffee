@@ -11,11 +11,13 @@ gulp.task 'scripts:coffee', ->
 
 gulp.task 'scripts:libraries', ->
     sources = [
-        'src/lib/jquery/dist/jquery.js',
+        'src/lib/jquery/dist/jquery.js'
+        'src/lib/slick-carousel/slick/slick.js'
         'src/lib/angular/angular.js'
         'src/lib/angular-route/angular-route.js'
         'src/lib/angular-animate/angular-animate.js'
         'src/lib/angular-strap/dist/angular-strap.js'
-        'lib/angular-strap/dist/angular-strap.tpl.js'
+        'src/lib/angular-strap/dist/angular-strap.tpl.js'
+        'src/lib/angular-slick/dist/slick.js'
     ]
     bundleJs(gulp.src(sources), 'dependencies.js')

@@ -12,5 +12,5 @@ module.exports = (stream, filename) ->
         .pipe(concat(filename))
         .pipe(gulp.dest('dist/app'))
         .pipe(uglify())
-        .pipe(rename(extname: 'min.js'))
+        .pipe(rename(extname: '.min.js'))
         .pipe(gulp.dest('dist/app'))
