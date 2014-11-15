@@ -1,3 +1,4 @@
-slick(lazy-load='ondemand' slides-to-show='1' slides-to-scroll='1')
+slick(slides-to-show='1' slides-to-scroll='1' speed='600'
+        autoplay='true' autoplay-speed='3500' pause-on-hover='true' infinite='true')
     div(ng-repeat='image in vm.images' class='image')
         img(data-lazy='{{image}}')
