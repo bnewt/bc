@@ -1,4 +1,6 @@
+q = require('q')
 del  = require('del')
-gulp = require('gulp')
 gulp.task 'clean', ->
-    del(['dist'])
+    d = q.defer()
+    del([ 'dist' ], d.resolve)
+    return d.promise

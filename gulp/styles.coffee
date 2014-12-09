@@ -1,5 +1,3 @@
-gulp = require('gulp')
-
 gulp.task('styles', ['styles:css'])
 
 gulp.task 'styles:css', ->

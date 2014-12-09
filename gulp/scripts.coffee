@@ -1,12 +1,10 @@
-gulp     = require('gulp')
-plumber  = require('gulp-plumber')
 ngCoffee = require('./ng-coffee')
 bundleJs = require('./bundle-js')
 
 gulp.task('scripts', ['scripts:coffee', 'scripts:libraries'])
 
 gulp.task 'scripts:coffee', ->
-    coffee = ngCoffee(gulp.src('src/**/*.coffee').pipe(plumber()))
+    coffee = ngCoffee(gulp.src('src/**/*.coffee').pipe(plugins.plumber()))
     bundleJs(coffee, 'bolte-construction.js')
 
 gulp.task 'scripts:libraries', ->
