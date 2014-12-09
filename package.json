@@ -1,5 +1,6 @@
 {
   "name": "bolte-construction",
+  "repository": "https://github.com/bnewt/bc.git",
   "version": "0.0.0",
   "description": "",
   "main": "index.js",
