@@ -21,6 +21,7 @@
     "gulp-html-prettify": "0.0.1",
     "gulp-htmlmin": "^0.2.0",
     "gulp-jade": "^0.8.0",
+    "require-dir": "^0.1.0",
     "gulp-ng-annotate": "^0.3.3",
     "gulp-plumber": "^0.6.6",
     "gulp-rename": "^1.2.0",

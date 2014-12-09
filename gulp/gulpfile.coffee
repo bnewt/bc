@@ -2,13 +2,13 @@ gulp        = require('gulp')
 plumber     = require('gulp-plumber')
 gutil       = require('gulp-util')
 
-serve = require('./gulp/serve')
+serve = require('./serve')
 
-require('./gulp/clean')
-require('./gulp/html')
-require('./gulp/scripts')
-require('./gulp/images')
-require('./gulp/styles')
+require('./clean')
+require('./html')
+require('./scripts')
+require('./images')
+require('./styles')
 
 gulp.task('default', [ 'serve' ])
     
