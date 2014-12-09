@@ -3,4 +3,5 @@ angular.module 'app', [
     'ngAnimate'
     'slick'
     'mgcrea.ngStrap'
+    'pasvaz.bindonce'
 ]

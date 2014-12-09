@@ -18,6 +18,7 @@ gulp.task 'scripts:libraries', ->
         'src/lib/angular-animate/angular-animate.js'
         'src/lib/angular-strap/dist/angular-strap.js'
         'src/lib/angular-strap/dist/angular-strap.tpl.js'
+        'src/lib/angular-bindonce/bindonce.js'
         'src/lib/angular-slick/dist/slick.js'
     ]
     bundleJs(gulp.src(sources), 'dependencies.js')
