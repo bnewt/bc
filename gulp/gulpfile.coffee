@@ -11,7 +11,7 @@ gulp.task 'watch', ['build'], ->
     
 gulp.task 'build', [
     'html'
-    'scripts'
+    'build:scripts'
     'images'
     'styles'
 ]

@@ -1,11 +1,15 @@
-ngCoffee = require('./ng-coffee')
-bundleJs = require('./bundle-js')
+compileCoffeescript = require('./factories/compile-coffeescript')
+ngAnnotate = require('./factories/compile-coffeescript')
+bundleJs = require('./factories/bundle-js')
 
-gulp.task('scripts', ['scripts:coffee', 'scripts:libraries'])
+gulp.task('build:scripts', ['scripts:coffee', 'scripts:libraries'])
 
 gulp.task 'scripts:coffee', ->
-    coffee = ngCoffee(gulp.src('src/**/*.coffee').pipe(plugins.plumber()))
-    bundleJs(coffee, 'bolte-construction.js')
+    gulp.src('src/**/*.coffee')
+            .on('error', plugins.util.log)
+        .pipe(compileCoffeescript())
+        .pipe(ngAnnotate())
+        .pipe(bundleJs('bolte-construction.js'))
 
 gulp.task 'scripts:libraries', ->
     sources = [
@@ -19,4 +23,5 @@ gulp.task 'scripts:libraries', ->
         'src/lib/angular-bindonce/bindonce.js'
         'src/lib/angular-slick/dist/slick.js'
     ]
-    bundleJs(gulp.src(sources), 'dependencies.js')
+    gulp.src(sources)
+        .pipe(bundleJs('dependencies.js'))

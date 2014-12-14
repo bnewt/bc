@@ -2,6 +2,7 @@ global._                    = require('lodash');
 global.del                  = require('del');
 global.gulp                 = require('gulp');
 global.express              = require('express');
+global.lazypipe             = require('lazypipe');
 global.imageminJpegtran     = require('imagemin-jpegtran');
 global.plugins              = require('gulp-load-plugins')();
 
