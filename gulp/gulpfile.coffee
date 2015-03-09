@@ -1,17 +1,18 @@
 serve = require('./serve')
 
 gulp.task('default', [ 'serve' ])
-    
+
 gulp.task 'serve', [ 'watch'], ->
     serve(port: 8080, directory: 'dist')
 
 gulp.task 'watch', ['build'], ->
-    gulp.watch(['src/**/*.jade'], ['html'])
     gulp.watch(['src/**/*.coffee'], [ 'scripts:coffee' ])
-    
+    gulp.watch(['src/**/*.html'], ['html'])
+    gulp.watch(['src/**/*.css'], ['styles'])
+
 gulp.task 'build', [
+    'scripts'
     'html'
-    'build:scripts'
     'images'
     'styles'
 ]

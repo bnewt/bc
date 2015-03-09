@@ -1,4 +1,8 @@
-angular.module('app').factory 'testimonialsService', ($q) ->
+class TestimonialsService
+
+
+m.factory 'testimonialsService', ->
+    d = m.deferred = m.deferred()
     get: -> $q.when [
         name: 'John & Debbie Mazzei',
         city: '',
