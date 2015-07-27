@@ -1,0 +1,42 @@
+var m = require('mithril'),
+    map = require('array-map'),
+    imagesService = require('../images/image-service');
+
+module.exports = {
+  view: function(){
+    return [
+      m('.pure-menu', m('ul.pure-menu-list', createMenuItems())),
+      m('p#contact-info', [
+        m('span', 'Call: 402-706-0660'),
+        m('br'),
+        m('a[href="mailto:bolteconst@cox.net"]', 'Or Email Bolte')
+      ]),
+      m('a#bbb-logo[href="http://www.bbb.org/nebraska"]'[
+        m('img[src="http://www.bolteconstruction.com/bbb%20logo126.jpg",width="126",height="73",border="0"]')
+      ])
+    ];
+
+    function createMenuItems(){
+      var i, imageType;
+      var menuItems = [ createMenuItem('/', 'Home') ];
+
+      for(i = 0; i < imageService.types.length; i++){
+        imageType = imageService.types[i];
+        menuItems.push(createMenuItem('/images/' + imageType.route, imageType.text));
+      }
+
+      menuItems.push(
+        createMenuItem('/testimonials', 'Testimonials'),
+        createMenuItem('/about', 'About'));
+
+        return menuItems;
+    }
+
+    function createMenuItem(route, text){
+      var attrs = { config: m.route };
+      return m('li.pure-menu-item', [
+        m("a[href='" + route + "']", attrs, text)
+      ]);
+    }
+  }
+};

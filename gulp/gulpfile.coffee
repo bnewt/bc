@@ -6,7 +6,7 @@ gulp.task 'serve', [ 'watch'], ->
     serve(port: 8080, directory: 'dist')
 
 gulp.task 'watch', ['build'], ->
-    gulp.watch(['src/**/*.coffee'], [ 'scripts:coffee' ])
+    gulp.watch(['src/**/*.js'], [ 'scripts' ])
     gulp.watch(['src/**/*.html'], ['html'])
     gulp.watch(['src/**/*.css'], ['styles'])
 

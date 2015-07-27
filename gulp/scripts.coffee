@@ -1,21 +1,26 @@
-plumber = require('gulp-plumber')
-coffee = require('gulp-coffee')
-concat = require('gulp-concat')
+'use strict'
 
-gulp.task('scripts', ['scripts:coffee', 'scripts:libraries'])
+gulp = require('gulp')
+gutil = require('gulp-util')
+uglify = require('gulp-uglify')
+rename = require('gulp-rename')
+source = require('vinyl-source-stream')
+buffer = require('vinyl-buffer')
+browserify = require('browserify')
 
-gulp.task 'scripts:coffee', ->
-    gulp.src('src/**/*.coffee')
-        .pipe(plumber())
-        .pipe(coffee())
-        .pipe(concat('bc.app.js'))
-        .pipe(gulp.dest('dist/js'))
+gulp.task 'scripts', ->
+  # set up the browserify instance on a task basis
+  b = browserify({
+    entries: './src/js/app.js',
+    debug: false
+  })
 
-gulp.task 'scripts:libraries', ->
-    sources = [
-        'src/lib/mithril/mithril.js'
-        'src/lib/mithril-di/mithril-di.js'
-    ]
-    gulp.src(sources, base: 'src')
-        .pipe(concat('bc.dependencies.js'))
-        .pipe(gulp.dest('dist/js'))
+  b.transform('brfs')
+
+  return b.bundle()
+    .pipe(source('bc.js'))
+    .pipe(buffer())
+    .pipe(gulp.dest('dist/js'))
+    .pipe(uglify()).on('error', gutil.log)
+    .pipe(rename(suffix: '.min'))
+    .pipe(gulp.dest('dist/js/'))
