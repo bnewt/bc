@@ -11,22 +11,25 @@ module.exports = {
         m('br'),
         m('a[href="mailto:bolteconst@cox.net"]', 'Or Email Bolte')
       ]),
-      m('a#bbb-logo[href="http://www.bbb.org/nebraska"]'[
-        m('img[src="http://www.bolteconstruction.com/bbb%20logo126.jpg",width="126",height="73",border="0"]')
+      m('a#bbb-logo[href="http://www.bbb.org/nebraska"]', [
+        m('img[src="http://www.bolteconstruction.com/bbb%20logo126.jpg"][width="126"][height="73"][border="0"]')
       ])
     ];
 
     function createMenuItems(){
-      var i, imageType;
-      var menuItems = [ createMenuItem('/', 'Home') ];
+      var i,
+          imageType,
+          imageTypes = imagesService.getImageTypes(),
+          menuItems = [ createMenuItem('/', 'Home') ];
 
-      for(i = 0; i < imageService.types.length; i++){
-        imageType = imageService.types[i];
+      for(i = 0; i < imageTypes.length; i++){
+        imageType = imageTypes[i];
         menuItems.push(createMenuItem('/images/' + imageType.route, imageType.text));
       }
 
       menuItems.push(
         createMenuItem('/testimonials', 'Testimonials'),
+        createMenuItem('/contact', 'Contact Us'),
         createMenuItem('/about', 'About'));
 
         return menuItems;
@@ -35,7 +38,7 @@ module.exports = {
     function createMenuItem(route, text){
       var attrs = { config: m.route };
       return m('li.pure-menu-item', [
-        m("a[href='" + route + "']", attrs, text)
+        m("a[href='" + route + "'][class='pure-menu-link']", attrs, text)
       ]);
     }
   }

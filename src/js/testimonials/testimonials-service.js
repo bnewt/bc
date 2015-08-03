@@ -1,8 +1,7 @@
 var m = require('mithril')
 
 function getTestimonials() {
-  var d = m.deferred();
-  d.resolve([
+  return [
       {
           name: 'John & Debbie Mazzei',
           city: '',
@@ -23,11 +22,9 @@ function getTestimonials() {
           city: 'Omaha, Nebraska',
           text: 'I wanted to let you know how much I love my new kitchen. It\'s more than I dreamed it could look like! Kudos to all the guys that work with you, they were always there when you said they would be. I cannot believe how quickly the job was completed. I have been spreading the word on what a fantastic job you did and how great you are to work with. Again, thanks for everything!'
       }
-    ]);
-
-  return d.promise;
+    ];
 }
 
 module.exports = {
-  get: getTestimonails
+  get: getTestimonials
 };

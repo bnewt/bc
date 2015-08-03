@@ -1,18 +1,23 @@
 var m = require('mithril'),
-    //fs = require('fs'),
-    indexOf = require('indexof'),
-    images = {},// fs.readFileSyncasdf(__dirname + '/images.json', 'utf8'),
-    types = ['kitchen', 'bathroom', 'lower-level', 'exterior', 'commercial'];
+    imageTypes = [];
+
+var images = require('./images.json');
+
+    for(var type in images){
+      if(images.hasOwnProperty(type)){
+        imageTypes.push(type);
+      }
+    }
 
 function getImageTypes(){
-  return [];
+  return imageTypes;
 }
 
-function getImages(type){
+function getImagesOfType(type){
   return images[type];
 }
 
 module.exports = {
-    types: getImageTypes,
-    get: getImages
+    getImageTypes: getImageTypes,
+    getImagesOfType: getImagesOfType
 };

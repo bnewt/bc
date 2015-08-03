@@ -13,9 +13,10 @@ gulp.task 'scripts', ->
   b = browserify({
     entries: './src/js/app.js',
     debug: false
+    transform: [ require('./image-index-transform') ]
   })
 
-  b.transform('brfs')
+  # b.external('mithril') # this will prevent mithril from being bundled
 
   return b.bundle()
     .pipe(source('bc.js'))

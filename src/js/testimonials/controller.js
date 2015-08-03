@@ -1,6 +1,6 @@
 var m = require('mithril'),
-service = require('./testimonials-service');
+testimonialsService = require('./testimonials-service');
 
 module.exports = function TestimonialsController(){
-  service.get().then( this.testimonials = m.prop([]) );
+  this.testimonials = m.prop(testimonialsService.get());
 };
