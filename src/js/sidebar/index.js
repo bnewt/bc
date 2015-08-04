@@ -24,7 +24,7 @@ module.exports = {
 
       for(i = 0; i < imageTypes.length; i++){
         imageType = imageTypes[i];
-        menuItems.push(createMenuItem('/images/' + imageType.route, imageType.text));
+        menuItems.push(createMenuItem('/images/' + imageType, imageType));
       }
 
       menuItems.push(
