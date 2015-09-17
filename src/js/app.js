@@ -1,5 +1,5 @@
 var m = require('mithril'),
-    defaultRoute = '/',
+    defaultRoute = '/home',
     sidebar = document.getElementById('sidebar'),
     hostElement = document.getElementById('content');
 
@@ -8,7 +8,7 @@ m.module(sidebar, require('./sidebar'))
 var routes = {
     '/about': require('./about'),
     '/contact': require('./contact'),
-    '/testimonials': require('./testimonials'),
+    '/testimonials/:name': require('./testimonials'),
     '/images/:imageType': require('./images')
 };
 

@@ -77,6 +77,12 @@ body{
   margin: 0 auto;
 }
 
+html, button, input, select, textarea,
+.pure-g [class *= "pure-u"] {
+    /* Set your content font stack here: */
+    font-family: 'Open Sans', sans-serif;
+}
+
 @media screen and (max-width: 48em){
   #footer {
     height: auto;
