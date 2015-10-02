@@ -11,12 +11,32 @@ module.exports = {
     if(indexOf(imageTypes, type) === -1){
       return m.route('/home');
     }
+    vm.imageType = m.prop(type);
     vm.images = imageService.getImagesOfType(type);
   },
   view: function imagesView(ctrl){
     return m('div', [
-      m('h1', 'Images:'),
-      m('pre', JSON.stringify(ctrl.images, null, 2))
+      m('h1', ctrl.imageType()),
+      m('.pure-g',[
+        m('.pure-u-5-5.selected-image', [
+          m('img.pure-img', { src: ctrl.images[0] })
+        ]),
+        m('.pure-u-5-5', m('.images', [
+          m('.arrow', '<'),
+          ctrl.images.map(function(image){
+            return m('img.pure-img', { src: image })
+          }),
+          m('.right')
+        ]))
+      ])
     ]);
   }
 };
+
+function map(items, transform){
+  var i = 0, len = items.length, results = [];
+  while(i < len){
+    results.push(transform(items[i]));
+    i++;
+  }
+}

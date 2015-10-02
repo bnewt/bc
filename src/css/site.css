@@ -5,6 +5,11 @@
     padding: 0.2em 0;
 }
 
+/* customize pure to use google open web font */
+html, button, input, select, textarea, .pure-g [class *= "pure-u"] {
+    font-family: 'Open Sans', sans-serif;
+}
+
 body{
   margin: 0;
   padding: 40px;
@@ -19,6 +24,25 @@ body{
   background: #FFF;
   min-height: 100%;
   position: relative;
+}
+
+#banner {
+  background: #000;
+  width: 100%;
+}
+
+#banner img{
+  float: left;
+  width: 340px;
+  height: 160px;
+}
+
+#design-to-finish {
+  float: left;
+  margin: 35px 0px 0px 75px;
+  color: #ffcc66;
+  font-size: 72px;
+  font-family: 'Allura', cursive;
 }
 
 #header {
@@ -52,18 +76,18 @@ body{
   color: #663333;
 }
 
-  #contact-info a {
-    text-decoration: none;
-    font-weight: bold;
-  }
+#contact-info a, #footer a {
+  text-decoration: none;
+  font-weight: bold;
+}
 
-  #contact-info a:link {
-    color: #996600;
-  }
+#contact-info a:link, #footer a:link {
+  color: #996600;
+}
 
-  #contact-info a:visited {
-    color: #006600;
-  }
+#contact-info a:visited, #footer a:visited {
+  color: #006600;
+}
 
 #bbb-logo {
   margin-left: 15px;
@@ -77,10 +101,14 @@ body{
   margin: 0 auto;
 }
 
-html, button, input, select, textarea,
-.pure-g [class *= "pure-u"] {
-    /* Set your content font stack here: */
-    font-family: 'Open Sans', sans-serif;
+.about {
+  margin-top: 10px;
+}
+
+.about p {
+  padding-right: 30px;
+  line-height: 1.5em;
+  text-align: justify;
 }
 
 @media screen and (max-width: 48em){

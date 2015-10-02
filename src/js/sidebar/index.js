@@ -1,5 +1,4 @@
 var m = require('mithril'),
-    capitalize = require('capitalize'),
     imageService = require('../images/image-service');
 
 module.exports = {
@@ -20,7 +19,7 @@ module.exports = {
       var i,
           imageType,
           imageTypes = imageService.getImageTypes(),
-          menuItems = [ createMenuItem('/', 'Home') ];
+          menuItems = [ createMenuItem('/home', 'Home') ];
 
       for(i = 0; i < imageTypes.length; i++){
         imageType = imageTypes[i];
@@ -29,20 +28,15 @@ module.exports = {
 
       menuItems.push(
         createMenuItem('/testimonials', 'Testimonials'),
-        createMenuItem('/contact', 'Contact Us'),
-        createMenuItem('/about', 'About'));
+        createMenuItem('/about', 'About Us'));
 
-        return menuItems;
+      return menuItems;
     }
 
     function createMenuItem(route, text){
-      function makeHumanReadable(string){
-        return capitalize.words(string.replace('-', ' '));
-      }
-
       var attrs = { config: m.route };
       return m('li.pure-menu-item', [
-        m("a[href='" + route + "'][class='pure-menu-link']", attrs, makeHumanReadable(text))
+        m("a[href='" + route + "'][class='pure-menu-link']", attrs, text)
       ]);
     }
   }
