@@ -116,3 +116,14 @@ body{
     height: auto;
   }
 }
+.page-title {
+  text-align: center;
+}
+
+.selected-image, .images {
+  margin: 10px 0px;
+}
+
+.arrow {
+  margin-top: 40px;
+}
