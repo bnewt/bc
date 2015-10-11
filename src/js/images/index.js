@@ -13,18 +13,19 @@ module.exports = {
     }
     vm.imageType = m.prop(type);
     vm.images = imageService.getImagesOfType(type);
+    vm.selectedImage = m.prop(vm.images[0]);
   },
   view: function imagesView(ctrl){
     return m('div', [
       m('h1.page-title', ctrl.imageType()),
       m('.pure-g', [
-        m('.pure-u-5-5.selected-image', m('img.pure-img', { src: ctrl.images[0] })),
+        m('.pure-u-5-5.selected-image', m('img.pure-img', { src: ctrl.selectedImage() })),
         m('.pure-u-5-5',
           m('.pure-g.images', [
             m('.arrow.pure-u-1-24', '<'),
             m('.pure-u-22-24', m('.pure-g',
               ctrl.images.slice(0, 5).map(function(image){
-                return m('.pure-u-1-5', m('img.pure-img', { src: image }));
+                return m('.pure-u-1-5', { onclick: function(){ ctrl.selectedImage(image); } }, m('img.pure-img', { src: image }));
               }))
             ),
             m('.arrow.pure-u-1-24', '>')
