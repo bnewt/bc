@@ -11,9 +11,26 @@ module.exports = {
     if(indexOf(imageTypes, type) === -1){
       return m.route('/home');
     }
+
+
     vm.imageType = m.prop(type);
     vm.images = imageService.getImagesOfType(type);
     vm.selectedImage = m.prop(vm.images[0]);
+
+    vm.page = 1;
+    vm.imagesPerPage = 5
+    vm.pageLeft = function(){
+        if(vm.page > 1){
+          vm.page -= 1;
+        }
+    };
+
+    vm.pageRight = function(){
+      if(vm.page < Math.ceil(vm.images.length / vm.imagesPerPage)){
+        vm.page += 1;
+      }
+    };
+
   },
   view: function imagesView(ctrl){
     return m('div', [
@@ -22,13 +39,13 @@ module.exports = {
         m('.pure-u-5-5.selected-image', m('img.pure-img', { src: ctrl.selectedImage() })),
         m('.pure-u-5-5',
           m('.pure-g.images', [
-            m('.arrow.pure-u-1-24', '<'),
+            m('.arrow.pure-u-1-24', { onclick: ctrl.pageLeft },  '<'),
             m('.pure-u-22-24', m('.pure-g',
-              ctrl.images.slice(0, 5).map(function(image){
+              ctrl.images.slice((ctrl.page - 1) * 5, (ctrl.page * 5)).map(function(image){
                 return m('.pure-u-1-5', { onclick: function(){ ctrl.selectedImage(image); } }, m('img.pure-img', { src: image }));
               }))
             ),
-            m('.arrow.pure-u-1-24', '>')
+            m('.arrow.pure-u-1-24', { onclick: ctrl.pageRight }, '>')
           ])
         )
       ])
