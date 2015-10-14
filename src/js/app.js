@@ -7,7 +7,7 @@ m.module(sidebar, require('./sidebar'))
 
 var routes = {
     '/about': require('./about'),
-    '/testimonials/:name': require('./testimonials'),
+    '/testimonials': require('./testimonials'),
     '/images/:imageType': require('./images')
 };
 

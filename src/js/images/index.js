@@ -33,19 +33,19 @@ module.exports = {
 
   },
   view: function imagesView(ctrl){
-    return m('div', [
+    return m('.images-page', [
       m('h1.page-title', ctrl.imageType()),
       m('.pure-g', [
         m('.pure-u-5-5.selected-image', m('img.pure-img', { src: ctrl.selectedImage() })),
         m('.pure-u-5-5',
           m('.pure-g.images', [
-            m('.arrow.pure-u-1-24', { onclick: ctrl.pageLeft },  '<'),
-            m('.pure-u-22-24', m('.pure-g',
+            m('.arrow.pure-u-1-12', { onclick: ctrl.pageLeft },  '<'),
+            m('.pure-u-5-6', m('.pure-g',
               ctrl.images.slice((ctrl.page - 1) * 5, (ctrl.page * 5)).map(function(image){
-                return m('.pure-u-1-5', { onclick: function(){ ctrl.selectedImage(image); } }, m('img.pure-img', { src: image }));
+                return m('.pure-u-1-5.image-container', { onclick: function(){ ctrl.selectedImage(image); } }, m('img.pure-img', { src: image }));
               }))
             ),
-            m('.arrow.pure-u-1-24', { onclick: ctrl.pageRight }, '>')
+            m('.arrow.pure-u-1-12', { onclick: ctrl.pageRight }, '>')
           ])
         )
       ])

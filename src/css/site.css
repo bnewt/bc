@@ -125,5 +125,33 @@ body{
 }
 
 .arrow {
+  text-align: center;
   margin-top: 40px;
+}
+
+.testimonials {
+    margin: 10px;
+}
+
+.testimonial {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 20px;
+  line-height: 1.5em;
+  text-align: justify;
+  clear: both;
+}
+
+.testimonial .name {
+  float: right;
+  clear: both;
+}
+
+.testimonial .city {
+  float: right;
+  clear: both;
+}
+
+.images .images-container {
+  padding: 10px;
 }
