@@ -39,7 +39,9 @@ body{
 
 #design-to-finish {
   float: left;
-  margin: 35px 0px 0px 75px;
+  margin: 35px 0px;
+  width: 55%;
+  text-align: center;
   color: #ffcc66;
   font-size: 72px;
   font-family: 'Allura', cursive;
@@ -156,13 +158,27 @@ body{
   padding: 10px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
+    body{
+      padding: 10px;
+    }
+
+    #container{
+      width: 95%;
+    }
+}
+
+@media (max-width: 830px) {
     body{
       padding: 20px;
     }
 
     #container{
       width: 90%;
+    }
+
+    #content{
+      padding: 15px;
     }
 
     #banner img{
@@ -184,6 +200,11 @@ body{
 
     #container{
       width: 95%;
+    }
+
+    #contact-info,
+    #bbb-logo {
+      display: none;
     }
 
     #banner img{
