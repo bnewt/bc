@@ -155,3 +155,42 @@ body{
 .images .images-container {
   padding: 10px;
 }
+
+@media (max-width: 768px) {
+    body{
+      padding: 20px;
+    }
+
+    #container{
+      width: 90%;
+    }
+
+    #banner img{
+      width: 100%;
+    }
+
+    #design-to-finish{
+      font-size: 54px;
+      margin: 0;
+      width: 100%;
+      text-align: center;
+    }
+}
+
+@media (max-width: 400px) {
+    body{
+      padding: 10px;
+    }
+
+    #container{
+      width: 95%;
+    }
+
+    #banner img{
+      width: 100%;
+    }
+
+    #design-to-finish{
+      font-size: 36px;
+    }
+}
