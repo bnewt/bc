@@ -26,9 +26,7 @@ module.exports = {
         menuItems.push(createMenuItem('/images/' + imageType, imageType));
       }
 
-      menuItems.push(
-        createMenuItem('/testimonials', 'Testimonials'),
-        createMenuItem('/about', 'About Us'));
+      menuItems.push(createMenuItem('/testimonials', 'Testimonials'));
 
       return menuItems;
     }
