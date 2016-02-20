@@ -5,7 +5,12 @@ glob = require('glob')
 
 _ = require('lodash')
 
-files = glob.sync('src/img/**/*.jpg').map (file) -> file.replace('src/', '')
+files = glob.sync('src/img/**/*.jpg')
+			.map (file) -> file.replace('src/', '')
+			.filter (file) -> file != 'img/banner.jpg'
+			.filter (file) -> file != 'img/bill-bolte.jpg'
+
+files.sort(require('javascript-natural-sort'))
 
 removeImgDirectory = (path) -> path.replace('img/', '')
 removeRestOfPath = (path) -> path.replace(/\/.*$/, '') # remove everything after first '/'
