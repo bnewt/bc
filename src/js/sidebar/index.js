@@ -16,14 +16,19 @@ module.exports = {
     ];
 
     function createMenuItems(){
-      var i,
-          imageType,
-          imageTypes = imageService.getImageTypes(),
-          menuItems = [ createMenuItem('/home', 'Home') ];
+      var i, imageType, imageTypes = [
+        { menuText: 'Kitchens', folderName: 'Kitchens' },
+        { menuText: 'Bathrooms', folderName: 'Bathrooms' },
+        { menuText: 'Lower Levels', folderName: 'Lower Level' },
+        { menuText: 'Exteriors', folderName: 'Exteriors' },
+        { menuText: 'Commercial', folderName: 'Commercial' }
+      ];
+
+      var menuItems = [ createMenuItem('/home', 'Home') ];
 
       for(i = 0; i < imageTypes.length; i++){
         imageType = imageTypes[i];
-        menuItems.push(createMenuItem('/images/' + imageType, imageType));
+        menuItems.push(createMenuItem('/images/' + imageType.folderName, imageType.menuText));
       }
 
       menuItems.push(createMenuItem('/testimonials', 'Testimonials'));
