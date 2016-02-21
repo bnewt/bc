@@ -5,10 +5,12 @@ module.exports = {
     return m('.pure-g', [
        m('.about.pure-u-5-5', [
          m('.pure-g', m('.pure-u-5-5', [
-           m('img[src="img/bill-bolte.jpg"]', {style: 'float: left' }),
-           m('div', { style: 'float: left; margin-left: 30px; margin-top: 70px' }, [
-             m('h4', 'Design to finish, we work directly with you every step of the way.'),
-             m('em', { style: 'float: right; margin-right: 30px;'}, 'Bill Bolte')
+           m('div', [
+             m('img.bill-bolte[src="img/bill-bolte.jpg"]')
+           ]),
+           m('div.home-design-to-finish', [
+             m('h4.tagline', 'Design to finish, we work directly with you every step of the way.'),
+             m('em.signature', 'Bill Bolte')
            ])
          ])),
         m('p', 'Thank you for visiting Bolte Construction, where our goal for every remodeling project is complete customer satisfaction. We constantly achieve that by offering full design services, workers that are licensed and insured and a two year written guarantee.'),
