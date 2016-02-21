@@ -95,6 +95,22 @@ body{
   margin-left: 15px;
 }
 
+.motto{
+  text-align: center;
+}
+
+.bill-bolte {
+  width: 148px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.signature{
+  float: right;
+  margin-right: 115px;
+}
+
 #images-container {
   margin: 15px;
 }

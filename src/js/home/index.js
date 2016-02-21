@@ -8,8 +8,8 @@ module.exports = {
            m('div', [
              m('img.bill-bolte[src="img/bill-bolte.jpg"]')
            ]),
-           m('div.home-design-to-finish', [
-             m('h4.tagline', 'Design to finish, we work directly with you every step of the way.'),
+           m('div.tagline', [
+             m('h4.motto', 'Design to finish, we work directly with you every step of the way.'),
              m('em.signature', 'Bill Bolte')
            ])
          ])),
