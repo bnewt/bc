@@ -5,10 +5,12 @@ glob = require('glob')
 
 _ = require('lodash')
 
-files = glob.sync('src/img/**/*.jpg')
+files = glob.sync('src/img/**/*.{jpg,JPG}')
 			.map (file) -> file.replace('src/', '')
 			.filter (file) -> file != 'img/banner.jpg'
 			.filter (file) -> file != 'img/bill-bolte.jpg'
+
+
 
 files.sort(require('javascript-natural-sort'))
 
