@@ -67,7 +67,7 @@ body{
   text-align: center;
 }
 
-#sidebar .pure-menu {
+#sidebar .sidebar {
   margin-top: 15px;
 }
 
@@ -83,12 +83,22 @@ body{
   font-weight: bold;
 }
 
-#contact-info a:link, #footer a:link {
+a:link {
   color: #996600;
 }
 
-#contact-info a:visited, #footer a:visited {
+a:visited {
   color: #006600;
+}
+
+.sidebar{
+  padding-left: 10px;
+  list-style: none;
+  list-style-position: inside;
+}
+
+.sidebar-menu-item {
+  font-weight: bold;
 }
 
 #bbb-logo {
@@ -113,6 +123,10 @@ body{
 
 #images-container {
   margin: 15px;
+}
+
+.image-container {
+  max-height: 78px;
 }
 
 .pure-img {

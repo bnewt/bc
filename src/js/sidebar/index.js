@@ -4,7 +4,7 @@ var m = require('mithril'),
 module.exports = {
   view: function(){
     return [
-      m('.pure-menu', m('ul.side-bar.pure-menu-list', createMenuItems())),
+      m('ul.sidebar', createMenuItems()),
       m('p#contact-info', [
         m('span', 'Call: 402-706-0660'),
         m('br'),
@@ -38,8 +38,8 @@ module.exports = {
 
     function createMenuItem(route, text){
       var attrs = { config: m.route };
-      return m('li.pure-menu-item', [
-        m("a[href='" + route + "'][class='pure-menu-link']", attrs, text)
+      return m('li.sidebar-menu-item', [
+        m("a.pure-menu-link[href='" + route + "']", attrs, m.trust('&bull; ' + text))
       ]);
     }
   }
