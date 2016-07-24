@@ -8,7 +8,7 @@ module.exports = {
       m('p#contact-info', [
         m('span', 'Call: 402-706-0660'),
         m('br'),
-        m('a[href="mailto:bolteconst@cox.net"]', 'Email Bolte Construction')
+        m('a#contact-info-email-link[href="mailto:bolteconst@cox.net"]', 'Email Bolte Construction')
       ]),
       m('a#bbb-logo[href="http://www.bbb.org/nebraska"]', [
         m('img[src="http://www.bolteconstruction.com/bbb%20logo126.jpg"][width="126"][height="73"][border="0"]')
