@@ -6,6 +6,7 @@ var m = require('mithril'),
 m.module(sidebar, require('./sidebar'))
 
 var routes = {
+    '/about': require('./about'),
     '/testimonials': require('./testimonials'),
     '/images/:imageType': require('./images')
 };
