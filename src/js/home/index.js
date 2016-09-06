@@ -5,7 +5,7 @@ module.exports = {
     return m('.pure-g',
        m('.home.pure-u-5-5', [
          m('.pure-g',
-            m('img.pure-u-5-5[src="img/2015_00171-cropped.JPG"]')),
+            m('img.pure-u-5-5[src="img/2015_00283-cropped.JPG"]')),
          m('h1.home-centered-text', '"DESIGN TO FINISH"'),
          m('.h3.home-centered-text', 'INTERIOR/EXTERIOR, KITCHENS, BATHROOMS,'),
          m('.h3.home-centered-text', 'ROOM ADDITIONS, LOWER LEVEL FINISHES, DECKS'),
@@ -25,8 +25,8 @@ module.exports = {
            ])
          ]),
          m('.pure-g', [
-           m('img.pure-u-1-3[src="img/2015_00171-cropped.JPG"]', {style: "max-height: 240px;"}),
-           m('img.pure-u-1-3[src="img/2015_00171-cropped.JPG"]', {style: "max-height: 240px;"}),
+           m('img.pure-u-1-3[src="img/2015_00162-cropped.JPG"]', {style: "max-height: 240px;"}),
+           m('img.pure-u-1-3[src="img/2015_00562-cropped.JPG"]', {style: "max-height: 240px;"}),
            m('img.pure-u-1-3[src="img/2015_00171-cropped.JPG"]', {style: "max-height: 240px;"})
          ])
       ])
