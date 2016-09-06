@@ -4,10 +4,11 @@ module.exports = {
   view: function contactView(){
     return m('.pure-g',
        m('.home.pure-u-5-5', [
-         m('.pure-g', m('.pure-u-5-5', m('img' /* image banner image goes here*/))),
-         m('h1.design-to-finish', '"DESIGN TO FINISH"'),
-         m('.h3', 'INTERIOR/EXTERIOR, KITCHENS, BATHROOMS,'),
-         m('.h3', 'ROOM ADDITIONS, LOWER LEVEL FINISHES, DECKS'),
+         m('.pure-g',
+            m('img.pure-u-5-5[src="img/2015_00171-cropped.JPG"]')),
+         m('h1.home-centered-text', '"DESIGN TO FINISH"'),
+         m('.h3.home-centered-text', 'INTERIOR/EXTERIOR, KITCHENS, BATHROOMS,'),
+         m('.h3.home-centered-text', 'ROOM ADDITIONS, LOWER LEVEL FINISHES, DECKS'),
          m('.pure-g', [
            m('ul.pure-u-1-3', [
              m('li', 'MEMBER OF BBB'),
@@ -24,9 +25,9 @@ module.exports = {
            ])
          ]),
          m('.pure-g', [
-           m('.pure-u-1-3', m('img')),
-           m('.pure-u-1-3', m('img')),
-           m('.pure-u-1-3', m('img'))
+           m('img.pure-u-1-3[src="img/2015_00171-cropped.JPG"]', {style: "max-height: 240px;"}),
+           m('img.pure-u-1-3[src="img/2015_00171-cropped.JPG"]', {style: "max-height: 240px;"}),
+           m('img.pure-u-1-3[src="img/2015_00171-cropped.JPG"]', {style: "max-height: 240px;"})
          ])
       ])
     );

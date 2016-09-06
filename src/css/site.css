@@ -113,6 +113,11 @@ a:visited {
   text-align: center;
 }
 
+.home-centered-text{
+  text-align: center;
+  margin-left: -100px;
+}
+
 .bill-bolte {
   width: 148px;
   display: block;
