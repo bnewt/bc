@@ -178,8 +178,13 @@ a:visited {
 }
 
 .arrow {
+  cursor: pointer;
   text-align: center;
   margin-top: 40px;
+}
+
+.arrow.disabled{
+  cursor: no-drop;;
 }
 
 .testimonials {
