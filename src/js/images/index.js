@@ -41,7 +41,11 @@ module.exports = {
     return m('.images-page', [
       m('h1.page-title', ctrl.imageType()),
       m('.pure-g', [ // TODO: add arrows to the selected image too
-        m('.pure-u-5-5.selected-image', m('img.pure-img', { src: ctrl.selectedImage() })),
+        m('.pure-u-5-5', m("pure-g", [
+          m('.arrow.pure-u-1-12', { "class": ctrl.canPageLeft() ? "" : "disabled", onclick: ctrl.pageLeft },  '<'),
+          m('.pure-u-5-6.selected-image', m('img.pure-img', { src: ctrl.selectedImage() })),
+          m('.arrow.pure-u-1-12', { "class": ctrl.canPageRight() ? "" : "disabled", onclick: ctrl.pageRight }, '>')
+        ])),
         m('.pure-u-5-5',
           m('.pure-g.images', [
             m('.arrow.pure-u-1-12', { "class": ctrl.canPageLeft() ? "" : "disabled", onclick: ctrl.pageLeft },  '<'),
