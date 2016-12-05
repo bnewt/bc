@@ -283,4 +283,17 @@ a:visited {
     #design-to-finish{
       font-size: 36px;
     }
+
+    .home-centered-text{
+      margin-left: inherit;
+    }
+
+    .home-remodel-types {
+      font-size: 13px;
+    }
+
+    .home-bullet-points {
+      width: 100%;
+      font-size: 13px;
+    }
 }
