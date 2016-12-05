@@ -2,6 +2,20 @@ var m = require('mithril')
 
 var testimonials = [
     {
+        name: 'Mike and Krisa Moore',
+        city: 'LaVista, Nebraska',
+        text: 'After seeing the quality of work that Bolte Construction had done in a friend’s home, we called and set up an appointment to discuss our options for a basement finish. Bill, Geoff and their staff are extremely knowledgeable, honest, timely and produce quality work. We had never undergone any home remodeling of this nature, yet working with Bill allowed us to feel completely comfortable during the entire process. From the initial visit and estimate to the final cleanup and every step in between, they were always reachable, communicated well and were respectful of our home. With the help and guidance of Bolte Construction, we were able to fine tune a remodel that fit into our budget and provided us with the living space and flexibility we were looking for. From the bathroom, to the home theater, HVAC and plumbing, Bill and his team knew what they were doing and they did it well. I highly recommend Bolte Construction to anyone looking for home remodeling in Omaha or the surrounding area. We will definitely use them for any future projects we may have.'
+    },
+    {
+        name: 'Steve and Barbara Breazeale',
+        city: 'Omaha, Nebraska',
+        text: 'Earlier this year, Bolte Construction remodeled our outdated bathroom. We called and Bill was a real person at the other end of the line – no leaving a message. That was worthy of a gold star. After discussing what we were interested in doing, an appointment was set up so that he could provide an estimate. Here is his second gold star – he was on time. Not only was he prompt, but courteous, knowledgeable and encouraging. Needless to say, he was hired for the job. The work began exactly on schedule. He was in contact with us for each detail and gave excellent advice when needed. All of his workers were also considerate and efficient. At the end of each workday, there was never a mess for us to clean up. We couldn’t be more pleased with the final result. When we’re ready to undertake our next remodeling adventure, you can be sure that Bolte Construction will be the first call we make.'
+    },{
+        name: 'Bob and Laura Callahan',
+        city: 'Omaha, Nebraska',
+        text: 'We would like to thank you for the beautiful remodeling of our main bathroom. We waited several years to update and it was so worth the wait to find the right company to handle our project. We appreciated your walking us through the process. You told us the first time we met that we would see progress every day and we did. You promised to keep construction dust as contained as possible and you did. You gave us a timeline and you were spot on. You repeatedly told us that you would do whatever we wanted to make sure the project was to our satisfaction and you did just that. There truly were no hiccups in this entire project and results were even better than we had hoped for. Thank you for your professionalism and please extend our gratitude to your craftsmen. We will confidently recommend you to friends and family because we know firsthand the quality of the workmanship of Bolte Construction.'
+    },
+    {
         name: 'John & Debbie Mazzei',
         city: '',
         text: 'Working with Bolte Construction was an extremely positive experience! He helped guide us through the entire remodeling experience from design to finish. He is a very knowledgeable and experienced contractor. From the beginning we were able to communicate well with him. He finished our project on time and on budget! Everyone who has seen the finished product has been impressed with the style, workmanship and flow of our kitchen. I would recommend Bill to anyone who expects professionalism, quality and service.'
