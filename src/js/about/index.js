@@ -9,8 +9,7 @@ module.exports = {
              m('img.bill-bolte[src="img/bill-bolte.jpg"]')
            ]),
            m('div.tagline', [
-             m('h4.motto', 'Design to finish, we work directly with you every step of the way.'),
-             m('em.signature', 'Bill Bolte')
+             m('h4.motto', m('em', '"Design to finish, we work directly with you every step of the way."')),
            ])
          ])),
         m('p', 'Thank you for visiting Bolte Construction, where our goal for every remodeling project is complete customer satisfaction. We constantly achieve that by offering full design services, workers that are licensed and insured and a two year written guarantee.'),
